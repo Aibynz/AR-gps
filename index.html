@@ -11,8 +11,7 @@
 
   <body>
     
-    <a-scene embedded arjs='trackingTethod: best'>
-    <a-anchor hit-testing-enable='true'>
+    <a-scene embedded arjs>
     <a-marker preset="hiro">
       <a-plane
         scr="insta.png"
@@ -28,8 +27,7 @@
         width="2"
       ></a-text>
     </a-marker>
-    </a-anchor>
-      <a-camera-static/>
+    <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
