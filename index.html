@@ -10,17 +10,25 @@
   </head>
 
   <body>
-    <a-scene
-      vr-mode-ui="enabled: false"
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-    >
+    
+    <a-scene embedded arjs='trackingTethod: best'>
+    <a-anchor hit-testing-enable='true'>
+      <a-plane
+        scr="insta.png"
+        height="1"
+        width="1"
+        position="2 1 0"
+      ></a-plane>
+
       <a-text
-        value="Hello, Aibyn!"
-        look-at="[gps-camera]"
-        scale="2 2 2"
-        gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;"
+        value="Instagram"
+        position="-2 1 0"
+        height="2"
+        width="2"
       ></a-text>
-      <a-camera gps-camera rotation-reader> </a-camera>
+
+    </a-anchor>
+      <a-camera-static/>
     </a-scene>
   </body>
 </html>
